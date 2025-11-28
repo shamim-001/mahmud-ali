@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, Mail, MessageCircle, MapPin, Clock } from "lucide-react"
+import { Phone, Mail, MessageCircle, MapPin, Clock, Facebook } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/config/site"
 import { useLanguage } from "@/contexts/language-context"
@@ -31,6 +31,13 @@ export function Footer() {
             </div>
             <p className="text-sm text-muted-foreground">{siteConfig.name}</p>
             <p className="text-xs italic text-muted-foreground">"{siteConfig.tagline}"</p>
+
+            <p>
+              <a href="https://www.facebook.com/profile.php?id=61577117213857" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#4481e3] text-white hover:bg-[#4481e3]/90 transition-colors">
+                <Facebook className="h-5 w-5" />
+                <span className="font-medium">Facebook Page</span>
+              </a>
+              </p>
           </div>
 
           {/* Contact */}
@@ -57,6 +64,8 @@ export function Footer() {
                   </a>
                 </Button>
               </li>
+
+          
             </ul>
           </div>
 

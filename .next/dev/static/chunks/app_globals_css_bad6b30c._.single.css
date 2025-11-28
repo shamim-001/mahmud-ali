@@ -1709,6 +1709,22 @@
     background-color: #1877f2;
   }
 
+  .bg-\[\#4481e3\] {
+    background-color: #4481e3;
+  }
+
+  .bg-\[\#E1306C\] {
+    background-color: #e1306c;
+  }
+
+  .bg-\[green\] {
+    background-color: green;
+  }
+
+  .bg-\[lightgreen\] {
+    background-color: #90ee90;
+  }
+
   .bg-accent {
     background-color: var(--accent);
   }
@@ -3113,6 +3129,34 @@
     .hover\:bg-\[\#1877F2\]\/90:hover {
       background-color: #1877f2e6;
       background-color: lab(50.4648% 10.5014 -70.3176 / .9);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-\[\#4481e3\]\/90:hover {
+      background-color: #4481e3e6;
+      background-color: lab(53.686% 4.99433 -56.7204 / .9);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-\[\#E1306C\]\/90:hover {
+      background-color: #e1306ce6;
+      background-color: lab(51.588% 69.0889 11.2258 / .9);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-\[green\]\/90:hover {
+      background-color: #008000e6;
+      background-color: lab(46.2777% -47.5524 48.5863 / .9);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-\[lightgreen\]\/90:hover {
+      background-color: #90ee90e6;
+      background-color: lab(86.5976% -43.0153 36.3939 / .9);
     }
   }
 

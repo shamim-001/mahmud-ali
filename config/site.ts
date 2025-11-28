@@ -27,6 +27,7 @@ export const siteConfig = {
     social: {
       linkedin: "https://www.linkedin.com/in/dr-syed-mahamud-ali-pt-4089802b3/",
       facebook: "https://www.facebook.com/dr.syed.mahamud.ali",
+      instagram: "https://www.instagram.com/mahamudparadise?utm_source=qr&igsh=MXQ4b2oydWlucmR4MQ==",
     },
   },
 

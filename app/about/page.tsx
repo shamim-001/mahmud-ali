@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Award, ArrowRight, Linkedin, Facebook } from "lucide-react"
+import { Award, ArrowRight, Linkedin, Facebook, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { SectionHeading } from "@/components/section-heading"
@@ -85,6 +85,16 @@ export default function AboutPage() {
                       >
                         <Facebook className="h-5 w-5" />
                         <span className="font-medium">{t.doctor.facebook}</span>
+                      </a>
+
+                      <a
+                        href={siteConfig.doctor.social.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#E1306C] text-white hover:bg-[#E1306C]/90 transition-colors"
+                      >
+                        <Instagram className="h-5 w-5" />
+                        <span className="font-medium">Instagram</span>
                       </a>
                     </div>
                   </div>

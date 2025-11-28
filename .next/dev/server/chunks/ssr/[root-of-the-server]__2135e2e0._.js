@@ -163,7 +163,7 @@ const siteConfig = {
         registrationNo: "GM–1806",
         qualifications: [
             "BPT (Bachelor of Physiotherapy), Medical Faculty, University of Dhaka",
-            "Postgraduate Diploma in Allied Health Sciences (BKSP)",
+            "Postgraduate Diploma Exercise Physiology (BKSP)",
             "Specialized training in orthopedic & myofascial therapy",
             "Mechanical pain assessment and consultation specialist",
             "Former physiotherapy consultant at American Universal Health Care Inc."
@@ -176,7 +176,8 @@ const siteConfig = {
         ],
         social: {
             linkedin: "https://www.linkedin.com/in/dr-syed-mahamud-ali-pt-4089802b3/",
-            facebook: "https://www.facebook.com/dr.syed.mahamud.ali"
+            facebook: "https://www.facebook.com/dr.syed.mahamud.ali",
+            instagram: "https://www.instagram.com/mahamudparadise?utm_source=qr&igsh=MXQ4b2oydWlucmR4MQ=="
         }
     },
     contact: {
