@@ -285,7 +285,7 @@ const siteConfig = {
     ],
     gallery: [
         {
-            src: "/physiotherapy-clinic-interior-modern-treatment-roo.jpg",
+            src: "/Mahmud at chamber.jpg",
             alt: "Clinic Treatment Room"
         },
         {
@@ -293,11 +293,11 @@ const siteConfig = {
             alt: "Back Pain Treatment"
         },
         {
-            src: "/physiotherapy-exercise-rehabilitation-equipment-gy.jpg",
+            src: "/Mahmud convocation.jpg",
             alt: "Rehabilitation Equipment"
         },
         {
-            src: "/physiotherapist-helping-patient-shoulder-exercise.jpg",
+            src: "/Mahmud at chamber 2.jpg",
             alt: "Shoulder Therapy Session"
         },
         {
