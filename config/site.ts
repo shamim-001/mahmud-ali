@@ -36,8 +36,8 @@ export const siteConfig = {
     phoneLink: "tel:+8801973885093",
     whatsapp: "+880 1973-885093",
     whatsappLink: "https://wa.me/8801973885093",
-    email: "drsyedmahamudali@gmail.com",
-    emailLink: "mailto:drsyedmahamudali@gmail.com",
+    email: "csppphysiotherapy@gmail.com",
+    emailLink: "mailto:csppphysiotherapy@gmail.com",
   },
 
   address: {
