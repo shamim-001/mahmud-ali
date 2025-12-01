@@ -1,8 +1,8 @@
-[00:00:05.180] Server  LOG      ✓ Ready in 2.8s
-[00:01:11.178] Server  LOG      ○ Compiling / ...
-[00:01:17.361] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:01:19.961] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:21.029] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+[00:00:05.138] Server  LOG      ✓ Ready in 3.5s
+[00:00:19.884] Server  LOG      ○ Compiling / ...
+[00:00:25.479] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:00:28.968] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:29.184] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -15,42 +15,666 @@ It can also happen if the client has a browser extension installed which messes 
 https://react.dev/link/hydration-mismatch
 
   ...
-    <RedirectErrorBoundary router={{...}}>
-      <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
-        <SegmentViewNode type="page" pagePath="page.tsx">
-          <SegmentTrieNode>
-          <HomePage>
-            <HeroSection>
-            <HighlightsSection>
-            <ServicesSection>
-            <DoctorSection>
-            <TestimonialsSection>
-            <GallerySection>
-            <LocationSection>
-            <HomePage>
-              <BookingForm>
-                <section id="booking" className="py-20 bg-m...">
-                  <div className="mx-auto ma...">
-                    <SectionHeading>
-                    <Card className="border-bor...">
-                      <div data-slot="card" className="text-card-...">
-                        <CardContent className="p-6 sm:p-8">
-                          <div data-slot="card-content" className="p-6 sm:p-8">
-                            <form onSubmit={function handleSubmit} className="space-y-6">
-                              <div className="grid gap-6...">
-                                <div className="space-y-2">
--                                 <div
--                                   data-lastpass-icon-root=""
--                                   style={{position:"relative",height:"0px",width:"0px",display:"initial",float:"left"}}
--                                 >
-                                ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                    ...
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <head>
+                          <body
+                            className="inter_fc6a2218-module__Tm4QHa__className font-sans antialiased"
+-                           __processed_86b41aec-198a-4755-b829-6677f9577442__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                            <noscript>
+                            <LanguageProvider>
+                              <Navbar>
+                                <header className="sticky top...">
+                                  <nav className="mx-auto fl...">
+                                    <LinkComponent href="/" className="flex items...">
+                                      <a className="flex items..." ref={function} onClick={function onClick} ...>
+                                        <div
+                                          className="relative h-10 w-10 overflow-hidden rounded-lg"
+-                                         bis_skin_checked="1"
+                                        >
+                                        ...
+                                    <div
+                                      className="hidden items-center gap-6 md:flex"
+-                                     bis_skin_checked="1"
+                                    >
+                                    <div
+                                      className="flex items-center gap-2 md:hidden"
+-                                     bis_skin_checked="1"
+                                    >
+                                  <div
+                                    className="fixed inset-x-0 top-16 z-50 h-[calc(100vh-4rem)] transform bg-backgroun..."
+-                                   bis_skin_checked="1"
+                                  >
+                                    <div
+                                      className="flex flex-col gap-4 p-6"
+-                                     bis_skin_checked="1"
+                                    >
                               ...
-        ...
-      ...
+                                <HomePage>
+                                  <HomePage>
+                                    <HeroSection>
+                                      <section className="relative o...">
+                                        <div
+                                          className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--..."
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="relative z-10 space-y-8"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="space-y-4"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="flex flex-col gap-4 sm:flex-row"
+-                                               bis_skin_checked="1"
+                                              >
+                                            <div
+                                              className="relative"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="relative aspect-square overflow-hidden rounded-2xl bg-gradi..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="absolute -bottom-6 -left-6 rounded-xl bg-card p-4 shadow-lg"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="flex items-center gap-3"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="flex h-12 w-12 items-center justify-center rounded-full..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+-                                                   bis_skin_checked="1"
+                                                  >
+                                  <HomePage>
+                                    <HighlightsSection>
+                                      <section className="py-20 bg-b...">
+                                        <div
+                                          className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <SectionHeading title="Why Choose..." subtitle="Experience...">
+                                            <div
+                                              className="mb-12 space-y-3 text-center"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <Card className="group bord...">
+                                              <div
+                                                data-slot="card"
+                                                className="text-card-foreground flex flex-col gap-6 rounded-xl border ..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <CardContent className="p-6">
+                                                  <div
+                                                    data-slot="card-content"
+                                                    className="p-6"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="mb-4 flex h-12 w-12 items-center justify-center round..."
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                    ...
+                                            <Card className="group bord...">
+                                              <div
+                                                data-slot="card"
+                                                className="text-card-foreground flex flex-col gap-6 rounded-xl border ..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <CardContent className="p-6">
+                                                  <div
+                                                    data-slot="card-content"
+                                                    className="p-6"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="mb-4 flex h-12 w-12 items-center justify-center round..."
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                    ...
+                                            <Card className="group bord...">
+                                              <div
+                                                data-slot="card"
+                                                className="text-card-foreground flex flex-col gap-6 rounded-xl border ..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <CardContent className="p-6">
+                                                  <div
+                                                    data-slot="card-content"
+                                                    className="p-6"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="mb-4 flex h-12 w-12 items-center justify-center round..."
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                    ...
+                                            <Card className="group bord...">
+                                              <div
+                                                data-slot="card"
+                                                className="text-card-foreground flex flex-col gap-6 rounded-xl border ..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <CardContent className="p-6">
+                                                  <div
+                                                    data-slot="card-content"
+                                                    className="p-6"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="mb-4 flex h-12 w-12 items-center justify-center round..."
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                    ...
+                                  <HomePage>
+                                    <ServicesSection>
+                                      <section className="py-20 bg-m...">
+                                        <div
+                                          className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <SectionHeading title="Physiother..." subtitle="Comprehens...">
+                                            <div
+                                              className="mb-12 space-y-3 text-center"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <Card className="group bord...">
+                                              <div
+                                                data-slot="card"
+                                                className="text-card-foreground flex flex-col gap-6 rounded-xl border ..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <CardHeader className="pb-3">
+                                                  <div
+                                                    data-slot="card-header"
+                                                    className="@container/card-header grid auto-rows-min grid-rows-[au..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <CardTitle className="text-lg te...">
+                                                      <div
+                                                        data-slot="card-title"
+                                                        className="font-semibold text-lg text-foreground"
+-                                                       bis_skin_checked="1"
+                                                      >
++                                                       {"Joint & Muscle Pain Management"}
+                                                <CardContent className="space-y-4">
+                                                  <div
+                                                    data-slot="card-content"
+                                                    className="px-6 space-y-4"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                            <Card className="group bord...">
+                                              <div
+                                                data-slot="card"
+                                                className="text-card-foreground flex flex-col gap-6 rounded-xl border ..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <CardHeader className="pb-3">
+                                                  <div
+                                                    data-slot="card-header"
+                                                    className="@container/card-header grid auto-rows-min grid-rows-[au..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <CardTitle className="text-lg te...">
+                                                      <div
+                                                        data-slot="card-title"
+                                                        className="font-semibold text-lg text-foreground"
+-                                                       bis_skin_checked="1"
+                                                      >
++                                                       Post-Surgical Rehabilitation
+                                                <CardContent className="space-y-4">
+                                                  <div
+                                                    data-slot="card-content"
+                                                    className="px-6 space-y-4"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                            <Card className="group bord...">
+                                              <div
+                                                data-slot="card"
+                                                className="text-card-foreground flex flex-col gap-6 rounded-xl border ..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <CardHeader className="pb-3">
+                                                  <div
+                                                    data-slot="card-header"
+                                                    className="@container/card-header grid auto-rows-min grid-rows-[au..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <CardTitle className="text-lg te...">
+                                                      <div
+                                                        data-slot="card-title"
+                                                        className="font-semibold text-lg text-foreground"
+-                                                       bis_skin_checked="1"
+                                                      >
++                                                       Sports Injury Rehabilitation
+                                                <CardContent className="space-y-4">
+                                                  <div
+                                                    data-slot="card-content"
+                                                    className="px-6 space-y-4"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                            <Card className="group bord...">
+                                              <div
+                                                data-slot="card"
+                                                className="text-card-foreground flex flex-col gap-6 rounded-xl border ..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <CardHeader className="pb-3">
+                                                  <div
+                                                    data-slot="card-header"
+                                                    className="@container/card-header grid auto-rows-min grid-rows-[au..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <CardTitle className="text-lg te...">
+                                                      <div
+                                                        data-slot="card-title"
+                                                        className="font-semibold text-lg text-foreground"
+-                                                       bis_skin_checked="1"
+                                                      >
++                                                       Neurological Physiotherapy
+                                                <CardContent className="space-y-4">
+                                                  <div
+                                                    data-slot="card-content"
+                                                    className="px-6 space-y-4"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                            <Card className="group bord...">
+                                              <div
+                                                data-slot="card"
+                                                className="text-card-foreground flex flex-col gap-6 rounded-xl border ..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <CardHeader className="pb-3">
+                                                  <div
+                                                    data-slot="card-header"
+                                                    className="@container/card-header grid auto-rows-min grid-rows-[au..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <CardTitle className="text-lg te...">
+                                                      <div
+                                                        data-slot="card-title"
+                                                        className="font-semibold text-lg text-foreground"
+-                                                       bis_skin_checked="1"
+                                                      >
++                                                       Geriatric Physiotherapy
+                                                <CardContent className="space-y-4">
+                                                  <div
+                                                    data-slot="card-content"
+                                                    className="px-6 space-y-4"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                            <Card className="group bord...">
+                                              <div
+                                                data-slot="card"
+                                                className="text-card-foreground flex flex-col gap-6 rounded-xl border ..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <CardHeader className="pb-3">
+                                                  <div
+                                                    data-slot="card-header"
+                                                    className="@container/card-header grid auto-rows-min grid-rows-[au..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <CardTitle className="text-lg te...">
+                                                      <div
+                                                        data-slot="card-title"
+                                                        className="font-semibold text-lg text-foreground"
+-                                                       bis_skin_checked="1"
+                                                      >
++                                                       {"Posture Correction & Ergonomic Advice"}
+                                                <CardContent className="space-y-4">
+                                                  <div
+                                                    data-slot="card-content"
+                                                    className="px-6 space-y-4"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                  <HomePage>
+                                    <DoctorSection>
+                                      <section className="py-20 bg-b...">
+                                        <div
+                                          className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <SectionHeading title="Meet Your ..." subtitle="Expert car...">
+                                            <div
+                                              className="mb-12 space-y-3 text-center"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <Card className="overflow-h...">
+                                            <div
+                                              data-slot="card"
+                                              className="text-card-foreground flex flex-col gap-6 rounded-xl border py..."
+-                                             bis_skin_checked="1"
+                                            >
+                                              <CardContent className="p-0">
+                                                <div
+                                                  data-slot="card-content"
+                                                  className="p-0"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="grid lg:grid-cols-5"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="relative lg:col-span-2"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+                                                        className="aspect-[4/5] lg:aspect-auto lg:h-full"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                    <div
+                                                      className="space-y-6 p-8 lg:col-span-3"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                      <div
+                                                        className="space-y-2"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                        <div
+                                                          className="flex items-start gap-2 text-sm text-muted-foreground"
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                        <div
+                                                          className="flex items-start gap-2 text-sm text-muted-foreground"
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                        <div
+                                                          className="flex items-start gap-2 text-sm text-muted-foreground"
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                        <div
+                                                          className="flex items-start gap-2 text-sm text-muted-foreground"
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                      ...
+                                  <HomePage>
+                                    <TestimonialsSection>
+                                      <section className="py-20 bg-m...">
+                                        <div
+                                          className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <SectionHeading title="What Our P..." subtitle="Real exper...">
+                                            <div
+                                              className="mb-12 space-y-3 text-center"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <Card className="border-bor...">
+                                              <div
+                                                data-slot="card"
+                                                className="text-card-foreground flex flex-col gap-6 rounded-xl border ..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <CardContent className="p-6">
+                                                  <div
+                                                    data-slot="card-content"
+                                                    className="p-6"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <Quote>
+                                                    <p>
+                                                    <div
+                                                      className="flex items-center justify-between"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <p>
+                                                      <div
+                                                        className="flex gap-0.5"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                            <Card className="border-bor...">
+                                              <div
+                                                data-slot="card"
+                                                className="text-card-foreground flex flex-col gap-6 rounded-xl border ..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <CardContent className="p-6">
+                                                  <div
+                                                    data-slot="card-content"
+                                                    className="p-6"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <Quote>
+                                                    <p>
+                                                    <div
+                                                      className="flex items-center justify-between"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <p>
+                                                      <div
+                                                        className="flex gap-0.5"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                            <Card className="border-bor...">
+                                              <div
+                                                data-slot="card"
+                                                className="text-card-foreground flex flex-col gap-6 rounded-xl border ..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <CardContent className="p-6">
+                                                  <div
+                                                    data-slot="card-content"
+                                                    className="p-6"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <Quote>
+                                                    <p>
+                                                    <div
+                                                      className="flex items-center justify-between"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <p>
+                                                      <div
+                                                        className="flex gap-0.5"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                  <HomePage>
+                                    <GallerySection>
+                                      <section className="py-20 bg-m...">
+                                        <div
+                                          className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <SectionHeading title="Our Clinic..." subtitle="Take a loo...">
+                                            <div
+                                              className="mb-12 space-y-3 text-center"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="grid grid-cols-2 md:grid-cols-3 gap-4"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <button onClick={function onClick} className="group rela...">
+                                              <img>
+                                              <div
+                                                className="absolute inset-0 bg-foreground/0 transition-colors duration..."
+-                                               bis_skin_checked="1"
+                                              >
+                                            <button onClick={function onClick} className="group rela...">
+                                              <img>
+                                              <div
+                                                className="absolute inset-0 bg-foreground/0 transition-colors duration..."
+-                                               bis_skin_checked="1"
+                                              >
+                                            <button onClick={function onClick} className="group rela...">
+                                              <img>
+                                              <div
+                                                className="absolute inset-0 bg-foreground/0 transition-colors duration..."
+-                                               bis_skin_checked="1"
+                                              >
+                                            <button onClick={function onClick} className="group rela...">
+                                              <img>
+                                              <div
+                                                className="absolute inset-0 bg-foreground/0 transition-colors duration..."
+-                                               bis_skin_checked="1"
+                                              >
+                                            <button onClick={function onClick} className="group rela...">
+                                              <img>
+                                              <div
+                                                className="absolute inset-0 bg-foreground/0 transition-colors duration..."
+-                                               bis_skin_checked="1"
+                                              >
+                                            <button onClick={function onClick} className="group rela...">
+                                              <img>
+                                              <div
+                                                className="absolute inset-0 bg-foreground/0 transition-colors duration..."
+-                                               bis_skin_checked="1"
+                                              >
+                                  <HomePage>
+                                    <LocationSection>
+                                      <section className="py-20 bg-b...">
+                                        <div
+                                          className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <SectionHeading title="Find Us" subtitle="Visit our ...">
+                                            <div
+                                              className="mb-12 space-y-3 text-center"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="grid gap-8 lg:grid-cols-2"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="overflow-hidden rounded-xl"
+-                                             bis_skin_checked="1"
+                                            >
+                                            <Card className="border-bor...">
+                                              <div
+                                                data-slot="card"
+                                                className="text-card-foreground flex flex-col gap-6 rounded-xl border ..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                <CardContent className="space-y-6 p-8">
+                                                  <div
+                                                    data-slot="card-content"
+                                                    className="space-y-6 p-8"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <h3>
+                                                    <div
+                                                      className="space-y-4"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+                                                        className="flex items-start gap-3"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                      <div
+                                                        className="flex items-start gap-3"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                      <div
+                                                        className="flex items-start gap-3"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                    <div
+                                                      className="flex flex-col gap-3 pt-4 sm:flex-row"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                  <HomePage>
+                                    <BookingForm>
+                                      <section id="booking" className="py-20 bg-m...">
+                                        <div
+                                          className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <SectionHeading title="Book an Ap..." subtitle="Fill out t...">
+                                            <div
+                                              className="mb-12 space-y-3 text-center"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <Card className="border-bor...">
+                                            <div
+                                              data-slot="card"
+                                              className="text-card-foreground flex flex-col gap-6 rounded-xl border py..."
+-                                             bis_skin_checked="1"
+                                            >
+                                              <CardContent className="p-6 sm:p-8">
+                                                <div
+                                                  data-slot="card-content"
+                                                  className="p-6 sm:p-8"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <form onSubmit={function handleSubmit} className="space-y-6">
+                                                    <div
+                                                      className="grid gap-6 sm:grid-cols-2"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+                                                        className="space-y-2"
+-                                                       bis_skin_checked="1"
+                                                      >
+-                                                       <div
+-                                                         data-lastpass-icon-root=""
+-                                                         style={{position:"relative",height:"0px",width:"0px",display:"initial", ...}}
+-                                                       >
+                                                      ...
+                                                    ...
+                              ...
+                            ...
+                  ...
 
-[00:01:21.227] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:01:21.227] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:01:21.227] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:01:21.227] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764407508775}
-[00:01:21.228] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764407508775}
-[00:03:45.712] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:00:29.796] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:29.796] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:29.796] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:29.797] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764578316452}
+[00:00:29.797] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764578316453}
