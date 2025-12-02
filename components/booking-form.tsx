@@ -59,9 +59,27 @@ export function BookingForm() {
     if (!validateForm()) return
 
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    
+    try {
+      const response = await fetch("/api/booking", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error("Failed to submit booking")
+      }
+
+      setIsSubmitted(true)
+    } catch (error) {
+      console.error("Error submitting booking:", error)
+      alert("Failed to submit booking. Please try again or call us directly.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

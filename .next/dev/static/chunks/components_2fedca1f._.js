@@ -1888,9 +1888,24 @@ function BookingForm() {
         e.preventDefault();
         if (!validateForm()) return;
         setIsSubmitting(true);
-        await new Promise((resolve)=>setTimeout(resolve, 1500));
-        setIsSubmitting(false);
-        setIsSubmitted(true);
+        try {
+            const response = await fetch("/api/booking", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+            if (!response.ok) {
+                throw new Error("Failed to submit booking");
+            }
+            setIsSubmitted(true);
+        } catch (error) {
+            console.error("Error submitting booking:", error);
+            alert("Failed to submit booking. Please try again or call us directly.");
+        } finally{
+            setIsSubmitting(false);
+        }
     };
     const handleChange = (e)=>{
         const { name, value } = e.target;
@@ -1922,12 +1937,12 @@ function BookingForm() {
                                     className: "h-8 w-8 text-primary"
                                 }, void 0, false, {
                                     fileName: "[project]/components/booking-form.tsx",
-                                    lineNumber: 82,
+                                    lineNumber: 100,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/booking-form.tsx",
-                                lineNumber: 81,
+                                lineNumber: 99,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1935,7 +1950,7 @@ function BookingForm() {
                                 children: t.booking.thankYou
                             }, void 0, false, {
                                 fileName: "[project]/components/booking-form.tsx",
-                                lineNumber: 84,
+                                lineNumber: 102,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1943,7 +1958,7 @@ function BookingForm() {
                                 children: t.booking.successMessage
                             }, void 0, false, {
                                 fileName: "[project]/components/booking-form.tsx",
-                                lineNumber: 85,
+                                lineNumber: 103,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1964,28 +1979,28 @@ function BookingForm() {
                                 children: t.ui.bookAnotherAppointment
                             }, void 0, false, {
                                 fileName: "[project]/components/booking-form.tsx",
-                                lineNumber: 86,
+                                lineNumber: 104,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/booking-form.tsx",
-                        lineNumber: 80,
+                        lineNumber: 98,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/booking-form.tsx",
-                    lineNumber: 79,
+                    lineNumber: 97,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/booking-form.tsx",
-                lineNumber: 78,
+                lineNumber: 96,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/booking-form.tsx",
-            lineNumber: 77,
+            lineNumber: 95,
             columnNumber: 7
         }, this);
     }
@@ -2000,7 +2015,7 @@ function BookingForm() {
                     subtitle: t.booking.subtitle
                 }, void 0, false, {
                     fileName: "[project]/components/booking-form.tsx",
-                    lineNumber: 114,
+                    lineNumber: 132,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -2027,13 +2042,13 @@ function BookingForm() {
                                                             children: t.ui.required
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/booking-form.tsx",
-                                                            lineNumber: 121,
+                                                            lineNumber: 139,
                                                             columnNumber: 42
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/booking-form.tsx",
-                                                    lineNumber: 120,
+                                                    lineNumber: 138,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -2045,7 +2060,7 @@ function BookingForm() {
                                                     className: errors.fullName ? "border-destructive" : ""
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/booking-form.tsx",
-                                                    lineNumber: 123,
+                                                    lineNumber: 141,
                                                     columnNumber: 19
                                                 }, this),
                                                 errors.fullName && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2053,13 +2068,13 @@ function BookingForm() {
                                                     children: errors.fullName
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/booking-form.tsx",
-                                                    lineNumber: 131,
+                                                    lineNumber: 149,
                                                     columnNumber: 39
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/booking-form.tsx",
-                                            lineNumber: 119,
+                                            lineNumber: 137,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2075,13 +2090,13 @@ function BookingForm() {
                                                             children: t.ui.required
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/booking-form.tsx",
-                                                            lineNumber: 135,
+                                                            lineNumber: 153,
                                                             columnNumber: 39
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/booking-form.tsx",
-                                                    lineNumber: 134,
+                                                    lineNumber: 152,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -2094,7 +2109,7 @@ function BookingForm() {
                                                     className: errors.phone ? "border-destructive" : ""
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/booking-form.tsx",
-                                                    lineNumber: 137,
+                                                    lineNumber: 155,
                                                     columnNumber: 19
                                                 }, this),
                                                 errors.phone && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2102,19 +2117,19 @@ function BookingForm() {
                                                     children: errors.phone
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/booking-form.tsx",
-                                                    lineNumber: 146,
+                                                    lineNumber: 164,
                                                     columnNumber: 36
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/booking-form.tsx",
-                                            lineNumber: 133,
+                                            lineNumber: 151,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/booking-form.tsx",
-                                    lineNumber: 118,
+                                    lineNumber: 136,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2125,7 +2140,7 @@ function BookingForm() {
                                             children: t.booking.emailOptional
                                         }, void 0, false, {
                                             fileName: "[project]/components/booking-form.tsx",
-                                            lineNumber: 151,
+                                            lineNumber: 169,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -2137,13 +2152,13 @@ function BookingForm() {
                                             onChange: handleChange
                                         }, void 0, false, {
                                             fileName: "[project]/components/booking-form.tsx",
-                                            lineNumber: 152,
+                                            lineNumber: 170,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/booking-form.tsx",
-                                    lineNumber: 150,
+                                    lineNumber: 168,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2157,7 +2172,7 @@ function BookingForm() {
                                                     children: t.booking.preferredDate
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/booking-form.tsx",
-                                                    lineNumber: 164,
+                                                    lineNumber: 182,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -2168,13 +2183,13 @@ function BookingForm() {
                                                     onChange: handleChange
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/booking-form.tsx",
-                                                    lineNumber: 165,
+                                                    lineNumber: 183,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/booking-form.tsx",
-                                            lineNumber: 163,
+                                            lineNumber: 181,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2185,7 +2200,7 @@ function BookingForm() {
                                                     children: t.booking.preferredTime
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/booking-form.tsx",
-                                                    lineNumber: 174,
+                                                    lineNumber: 192,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -2196,19 +2211,19 @@ function BookingForm() {
                                                     onChange: handleChange
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/booking-form.tsx",
-                                                    lineNumber: 175,
+                                                    lineNumber: 193,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/booking-form.tsx",
-                                            lineNumber: 173,
+                                            lineNumber: 191,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/booking-form.tsx",
-                                    lineNumber: 162,
+                                    lineNumber: 180,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2219,7 +2234,7 @@ function BookingForm() {
                                             children: t.booking.problemType
                                         }, void 0, false, {
                                             fileName: "[project]/components/booking-form.tsx",
-                                            lineNumber: 186,
+                                            lineNumber: 204,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Select"], {
@@ -2235,12 +2250,12 @@ function BookingForm() {
                                                         placeholder: t.booking.selectConcern
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/booking-form.tsx",
-                                                        lineNumber: 192,
+                                                        lineNumber: 210,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/booking-form.tsx",
-                                                    lineNumber: 191,
+                                                    lineNumber: 209,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -2250,7 +2265,7 @@ function BookingForm() {
                                                             children: t.booking.problemTypes.backPain
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/booking-form.tsx",
-                                                            lineNumber: 195,
+                                                            lineNumber: 213,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -2258,7 +2273,7 @@ function BookingForm() {
                                                             children: t.booking.problemTypes.neckPain
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/booking-form.tsx",
-                                                            lineNumber: 196,
+                                                            lineNumber: 214,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -2266,7 +2281,7 @@ function BookingForm() {
                                                             children: t.booking.problemTypes.shoulderPain
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/booking-form.tsx",
-                                                            lineNumber: 197,
+                                                            lineNumber: 215,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -2274,7 +2289,7 @@ function BookingForm() {
                                                             children: t.booking.problemTypes.kneePain
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/booking-form.tsx",
-                                                            lineNumber: 198,
+                                                            lineNumber: 216,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -2282,7 +2297,7 @@ function BookingForm() {
                                                             children: t.booking.problemTypes.sportsInjury
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/booking-form.tsx",
-                                                            lineNumber: 199,
+                                                            lineNumber: 217,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -2290,7 +2305,7 @@ function BookingForm() {
                                                             children: t.booking.problemTypes.postSurgery
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/booking-form.tsx",
-                                                            lineNumber: 200,
+                                                            lineNumber: 218,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -2298,7 +2313,7 @@ function BookingForm() {
                                                             children: t.booking.problemTypes.neurological
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/booking-form.tsx",
-                                                            lineNumber: 201,
+                                                            lineNumber: 219,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -2306,7 +2321,7 @@ function BookingForm() {
                                                             children: t.booking.problemTypes.posture
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/booking-form.tsx",
-                                                            lineNumber: 202,
+                                                            lineNumber: 220,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -2314,25 +2329,25 @@ function BookingForm() {
                                                             children: t.booking.problemTypes.other
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/booking-form.tsx",
-                                                            lineNumber: 203,
+                                                            lineNumber: 221,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/booking-form.tsx",
-                                                    lineNumber: 194,
+                                                    lineNumber: 212,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/booking-form.tsx",
-                                            lineNumber: 187,
+                                            lineNumber: 205,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/booking-form.tsx",
-                                    lineNumber: 185,
+                                    lineNumber: 203,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2343,7 +2358,7 @@ function BookingForm() {
                                             children: t.booking.additionalDetails
                                         }, void 0, false, {
                                             fileName: "[project]/components/booking-form.tsx",
-                                            lineNumber: 209,
+                                            lineNumber: 227,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$textarea$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Textarea"], {
@@ -2355,13 +2370,13 @@ function BookingForm() {
                                             onChange: handleChange
                                         }, void 0, false, {
                                             fileName: "[project]/components/booking-form.tsx",
-                                            lineNumber: 210,
+                                            lineNumber: 228,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/booking-form.tsx",
-                                    lineNumber: 208,
+                                    lineNumber: 226,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -2372,34 +2387,34 @@ function BookingForm() {
                                     children: isSubmitting ? t.ui.submitting : t.ui.submitAppointmentRequest
                                 }, void 0, false, {
                                     fileName: "[project]/components/booking-form.tsx",
-                                    lineNumber: 220,
+                                    lineNumber: 238,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/booking-form.tsx",
-                            lineNumber: 117,
+                            lineNumber: 135,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/booking-form.tsx",
-                        lineNumber: 116,
+                        lineNumber: 134,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/booking-form.tsx",
-                    lineNumber: 115,
+                    lineNumber: 133,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/booking-form.tsx",
-            lineNumber: 113,
+            lineNumber: 131,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/booking-form.tsx",
-        lineNumber: 112,
+        lineNumber: 130,
         columnNumber: 5
     }, this);
 }
