@@ -61,7 +61,7 @@ export default function RootLayout({
         </Script>
         {/* End Google Tag Manager */}
       </head>
-      <body className={`${inter.className} font-sans antialiased`}>
+      <body className={`${inter.className} font-sans antialiased overflow-x-hidden`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
